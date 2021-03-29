@@ -1,21 +1,10 @@
-# MinimalTodo
+## MinimalTodo
 
-**TODO: Add description**
+It is a classic todo program.
 
-## Installation
+### How to run:
+- Once you have cloned this reposiroty, go to the terminal and run `iex -S mix`
+- Inside iex, import the main Module `import MinimalTodo`
+- And call the start function `start`
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `minimal_todo` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:minimal_todo, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/minimal_todo](https://hexdocs.pm/minimal_todo).
-
+And that's it! After that, a CLI will appear for you and you just have to follow the instructions there!
