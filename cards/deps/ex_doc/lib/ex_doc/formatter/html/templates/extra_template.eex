@@ -1,0 +1,6 @@
+<%= head_template(config, %{title: title, type: :extra}) %>
+<%= sidebar_template(config, nodes_map) %>
+
+<%= link_headings(content) %>
+<%= bottom_actions_template(refs) %>
+<%= footer_template(config) %>
