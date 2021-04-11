@@ -40,7 +40,7 @@ services:
 `mix ecto.gen.repo -r YourAppName.Repo`
 
 
-After all of it, let's set up out docker container in the terminal with <br>
+After all of it, let's set up our docker container in the terminal with <br>
 `docker-compose up`
 
 And finally create our database: <br>
@@ -48,4 +48,32 @@ And finally create our database: <br>
 
 If everything went well, you'll receive a message like this:
 **The database for YourAppName.Repo has been created**
+
+Since we have our database, let's generate our tables.
+To do that, let's run the command <br>`mix ecto.gen.migration table_name`
+
+###### Important: To run the command above, make sure you have the following folders inside your projec <br>  `priv/repo/migrations` <br> Otherwise, you'll receive an error message. <br> So, to create that, just go to your project root and create the folders above.
+
+Inside migrations, you probably have a file with a very crazy name (lots of numbers plus the migration name you create. <br>
+Inside this file, you probably have some code like this:
+
+```
+defmodule YourAppName.Repo.Migrations.TableName do
+  use Ecto.Migration
+
+  def change do
+
+  end
+end
+```
+
+Let's add some code to this migration to create a new table called "people", with a few columns in it:
+and run <br>`mix ecto.migrate`to create our migration.
+
+If everything went well, you'll receive a message like this `22:25:21.291 [info]  == Migrated 20210409011323 in 0.0s`
+You can go to `localhost:8080` (witch is the adress we defined in our docker-compose file and also in config.exs inside our project), fill the informations according to the config.exs file, and you'll see a table just as we created :)
+
+### Now, let's create our schemas
+- In `lib/_your_app_name_/` we will create a file, that I will call `users.ex`. Here we will map our tables.
+
 
