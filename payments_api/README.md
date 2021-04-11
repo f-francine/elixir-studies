@@ -36,19 +36,15 @@ services:
     {:postgrex, ">= 0.0.0"}
 ```
  - Run the command `mix deps.get`to install the depencies
- - Now, lets *********** and run the command:
-```
-mix ecto.gen.repo -r YourAppName.Repo
-```
+ - Now, lets generate our database running the command: <br>
+`mix ecto.gen.repo -r YourAppName.Repo`
 
-After all of it, let's set up out docker container in the terminal with 
-```docker-compose up
-```
 
-And finally create our database:
-```
-mix ecto.create
-```
+After all of it, let's set up out docker container in the terminal with <br>
+`docker-compose up`
+
+And finally create our database: <br>
+`mix ecto.create`
 
 If everything went well, you'll receive a message like this:
 **The database for YourAppName.Repo has been created**
